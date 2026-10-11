@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OfertaRadar – Las mejores ofertas de Amazon</title>
+  <meta name="description" content="Selección de productos y ofertas de Amazon elegidos a mano." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="/" class="logo" aria-label="OfertaRadar, inicio">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Oferta<span>Radar</span>
+      </a>
+      <label class="search">
+        <span class="sr-only">Buscar productos</span>
+        <input id="search" type="search" placeholder="Buscar productos…" autocomplete="off" />
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <p class="eyebrow">Seleccionado a mano · Actualizado a diario</p>
+      <h1>Las ofertas que <em>sí</em> merecen la pena.</h1>
+      <p class="lead">Rastreamos Amazon para que tú no tengas que hacerlo. Productos probados, bien valorados y con buen precio.</p>
+    </section>
+
+    <section class="wrap">
+      <nav id="filters" class="filters" aria-label="Categorías"></nav>
+      <div id="grid" class="grid" aria-live="polite">
+        <p class="status">Cargando productos…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Divulgación de afiliados:</strong> como Afiliado de Amazon, OfertaRadar obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Los precios y la disponibilidad pueden cambiar; consulta siempre el precio actual en Amazon.</p>
+      <p class="muted">© <span id="year"></span> OfertaRadar</p>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

@@ -7,10 +7,12 @@ Sin tocar código: entras a `/admin`, pegas tus enlaces de Amazon y los producto
 ```
 tienda-netlify/
 ├── netlify.toml                  ← configuración de Netlify
-├── package.json                  ← dependencia @netlify/blobs (base de datos)
+├── package.json                  ← dependencias (@netlify/database + Drizzle)
+├── db/schema.ts                  ← tabla de productos
 ├── netlify/
-│   ├── functions/products.mjs    ← API  /api/products
-│   └── lib/core.mjs              ← lógica y validaciones
+│   ├── functions/products.mts    ← API  /api/products
+│   ├── lib/core.mts              ← lógica y validaciones
+│   └── database/migrations/      ← se aplican solas en cada deploy
 └── public/                       ← lo que ve el público
     ├── index.html · styles.css · script.js
     └── admin/                    ← panel  /admin
@@ -47,4 +49,4 @@ Si el sitio ya existe en Netlify sin repositorio, también puedes usar Netlify C
 - **Moneda**: cambia `CURRENCY` al inicio de `public/script.js` (por defecto `USD`).
 - **Imágenes**: usa las oficiales de Amazon (SiteStripe/PA-API) o fotos propias; las de Unsplash son solo de ejemplo.
 - **Seguridad**: usa una contraseña larga. El panel está marcado `noindex` y la API rechaza cualquier cambio sin contraseña.
-- Los datos viven en Netlify Blobs: sobreviven a cada nuevo deploy.
+- Los datos viven en Netlify Database (Postgres gestionado): sobreviven a cada nuevo deploy.
