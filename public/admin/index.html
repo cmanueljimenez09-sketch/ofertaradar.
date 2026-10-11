@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Panel · OfertaRadar</title>
+  <link rel="stylesheet" href="/admin/admin.css" />
+</head>
+<body>
+  <section id="login" class="login">
+    <form id="login-form" class="login-card">
+      <h1>Oferta<span>Radar</span> · Panel</h1>
+      <label>Contraseña
+        <input id="password" type="password" autocomplete="current-password" required autofocus />
+      </label>
+      <button type="submit" class="btn primary">Entrar</button>
+      <p id="login-error" class="error" role="alert"></p>
+    </form>
+  </section>
+
+  <section id="app" class="app" hidden>
+    <header class="topbar">
+      <h1>Oferta<span>Radar</span> · Productos</h1>
+      <div class="actions">
+        <a href="/" target="_blank" class="btn">Ver web ↗</a>
+        <button id="new-btn" type="button" class="btn primary">+ Nuevo producto</button>
+        <button id="logout-btn" type="button" class="btn ghost">Salir</button>
+      </div>
+    </header>
+    <p id="flash" class="flash" role="status"></p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Orden</th><th></th><th>Producto</th><th>Precio</th><th>Estado</th><th>Acciones</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <dialog id="editor">
+    <form id="product-form" method="dialog">
+      <h2 id="editor-title">Nuevo producto</h2>
+      <label>Enlace de afiliado de Amazon
+        <input name="url" type="url" placeholder="https://amzn.to/…" />
+      </label>
+      <label>Título *
+        <input name="title" required maxlength="200" />
+      </label>
+      <label>URL de la imagen
+        <input name="image" type="url" placeholder="https://m.media-amazon.com/…" />
+      </label>
+      <label>Descripción
+        <textarea name="description" rows="3" maxlength="1000"></textarea>
+      </label>
+      <div class="row">
+        <label>Precio (opcional)
+          <input name="price" inputmode="decimal" placeholder="29.99" maxlength="30" />
+        </label>
+        <label>Precio anterior (opcional)
+          <input name="oldPrice" inputmode="decimal" placeholder="39.99" maxlength="30" />
+        </label>
+      </div>
+      <div class="row">
+        <label>Categorías (separadas por comas)
+          <input name="categories" placeholder="Tecnología, Audio" />
+        </label>
+        <label>Etiqueta (opcional)
+          <input name="badge" placeholder="Oferta" maxlength="30" />
+        </label>
+      </div>
+      <label class="check"><input name="published" type="checkbox" /> Publicado (visible en la web)</label>
+      <p id="form-error" class="error" role="alert"></p>
+      <div class="dialog-actions">
+        <button type="button" id="cancel-btn" class="btn ghost">Cancelar</button>
+        <button type="submit" class="btn primary">Guardar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="/admin/admin.js" defer></script>
+</body>
+</html>

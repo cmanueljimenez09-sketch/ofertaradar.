@@ -1,0 +1,9 @@
+INSERT INTO "products" ("title", "image", "description", "badge", "categories", "published", "position") VALUES
+  ('Auriculares inalámbricos con cancelación de ruido', 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80', 'Sonido envolvente, hasta 30 horas de batería y carga rápida.', 'Top ventas', ARRAY['Tecnología','Audio'], false, 1),
+  ('Reloj inteligente deportivo', 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80', 'Monitor de ritmo cardíaco, GPS y resistencia al agua.', '', ARRAY['Tecnología','Deporte'], false, 2),
+  ('Cafetera espresso compacta', 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80', 'Prepara espresso y capuchino en casa en menos de un minuto.', 'Oferta', ARRAY['Hogar','Cocina'], false, 3),
+  ('Mochila urbana resistente al agua', 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80', 'Compartimento acolchado para portátil de 15" y puerto USB.', '', ARRAY['Viaje','Moda'], false, 4),
+  ('Altavoz Bluetooth portátil', 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&q=80', 'Graves potentes, resistente a salpicaduras y 12 h de autonomía.', '', ARRAY['Tecnología','Audio'], false, 5),
+  ('Zapatillas de running ligeras', 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80', 'Amortiguación reactiva y malla transpirable.', 'Nuevo', ARRAY['Deporte','Moda'], false, 6),
+  ('Lámpara de escritorio LED regulable', 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80', 'Cinco niveles de brillo y temperatura de color ajustable.', '', ARRAY['Hogar','Oficina'], false, 7),
+  ('Botella térmica de acero inoxidable', 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&q=80', 'Mantiene el frío 24 h y el calor 12 h. Libre de BPA.', '', ARRAY['Deporte','Viaje'], false, 8);
